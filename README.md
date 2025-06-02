@@ -304,7 +304,7 @@ The Grid component provides web responsiveness and positional flexibility so tha
 ```
 
 #### 'Auto' feature:  
-If you want to reduce or remove the amount of queries you write, the `auto` prop is available to you. Set the `auto` prop set to 'yes' and remove the Grid.Col component entirely. Insert your child content/component directly within the `Grid.Row` component, and your grid can now responsibly expand, contract, and wrap child content whenever there are changes to the window/viewport.
+If you want to reduce or remove the amount of queries you write, the `auto` prop is available to you. Have the `auto` prop set to 'yes' and remove the `Grid.Col` component entirely. Insert your child content/component directly within the `Grid.Row` component, and your grid can now responsibly expand, contract, and wrap child content whenever there are changes to the window/viewport.
 
 **Example**
 
