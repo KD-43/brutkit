@@ -1,0 +1,45 @@
+//Insert your font path here:
+$font-path: "../assets/fonts";
+
+@font-face {
+    src: url('#{$font-path}/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf');
+    font-family: "Plex";
+}
+
+@font-face {
+    src: url('#{$font-path}/Pirata_One/PirataOne-Regular.ttf');
+    font-family: "Pirata";
+}
+
+@font-face {
+    src: url('#{$font-path}/Special_Gothic_Condensed_One/SpecialGothicCondensedOne-Regular.ttf');
+    font-family: "SPG_Con";
+}
+
+.text-body {
+    font-family: "Plex";
+}
+
+.text-display {
+    font-family: "Pirata";
+}
+
+.text-heading {
+    font-family: "SPG_Con";
+}
+
+.fs-1 {
+    font-size: 1em;
+}
+.fs-2 {
+    font-size: 2em;
+}
+.fs-3 {
+    font-size: 3em;
+}
+.fs-4 {
+    font-size: 4em;
+}
+.fs-5 {
+    font-size: 5em;
+}

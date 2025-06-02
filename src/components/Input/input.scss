@@ -1,0 +1,42 @@
+@use '../../scss/fonts';
+@use '../../scss/scss_variables/colors' as *;
+
+.input {
+    width: 100%;
+    outline: none;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid $red;
+    border-color: $red;
+
+    &::placeholder {
+        color: $red;
+    }
+}
+
+
+.input-sm {
+    width: 100px;
+    height: 25px;
+}
+.input-md {
+    width: 250px;
+    height: 25px;
+}
+.input-lg {
+    width: 500px;
+    height: 25px;
+}
+
+.input:focus {
+    box-shadow: inset;
+}
+
+.input-combo_btn {
+    display: flex;
+    
+    input {
+        height: auto;
+    }
+}

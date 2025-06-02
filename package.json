@@ -1,0 +1,70 @@
+{
+  "name": "brutkit",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A React UI component library styled with a Brutalism aesthetic.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-error-boundary": "^6.0.0",
+    "globals": "^16.0.0",
+    "vite": "^6.3.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "sass": "^1.89.0"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sass": "^1.89.0"
+  },
+  "main": "./dist/brutkit.umd.cjs",
+  "module": "./dist/brutkit.js",
+  "exports": {
+    ".": {
+      "import": "./dist/brutkit.js",
+      "require": "./dist/brutkit.umd.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "react",
+    "components",
+    "scss",
+    "css",
+    "ui",
+    "library",
+    "brutalism",
+    "brutkit"
+  ],
+  "author": "Kevin Duong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KD-43/brutkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KD-43/brutkit/issues"
+  },
+  "homepage": "https://github.com/KD-43/brutkit#readme"
+}

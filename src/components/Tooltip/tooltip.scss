@@ -1,0 +1,26 @@
+@use '../../scss/scss_variables/colors' as *;
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tooltip-content {
+    position: absolute;
+    z-index: 1000;
+    background-color: $black;
+    color: $white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    //Basic positioning:
+    bottom: 125%; // Position above container
+    left: 50%; // center horizontally
+    transform: translateX(-50%); // adjust horizontal position for centering
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}

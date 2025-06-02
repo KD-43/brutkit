@@ -1,0 +1,118 @@
+@use '../../scss/scss_variables/colors' as *;
+@use '../../scss/fonts' as *;
+@use 'sass:color';
+
+@mixin btnSize ($size) {
+    @if $size == 'small' {
+        font-size: 1em;
+        padding: 4px 8px 4px 8px;
+        min-width: 53px;
+    }
+    @if $size == 'medium' {
+        font-size: 1.5em;
+        padding: 8px 16px 8px 16px;
+        min-width: 88px;
+
+    }
+    @if $size == 'large' {
+        font-size: 2em;
+        padding: 12px 24px 12px 24px;
+        min-width: 123px;
+
+    }
+}
+
+.btn {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border: none;
+    outline: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font-family: 'SPG_Con';
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    padding: 1rem 1rem 1rem 1rem;
+
+    &:hover {
+        font-family: 'Pirata';
+        transform: scale(1.1);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn:before {
+    content: attr(data-label);
+    font-family: 'Pirata';
+    visibility: hidden;
+}
+
+.btn-label {
+    position: absolute;
+}
+
+.btn-sm {
+    @include btnSize ('small');
+}
+.btn-md {
+    @include btnSize ('medium');
+}
+.btn-lg {
+    @include btnSize ('large');
+}
+
+.btn-red {
+    background-color: $red;
+    color: $black;
+
+    &:hover {
+        background-color: $darkRed;
+        color: $white;
+    }
+}
+.btn-darkRed {
+    background-color: $darkRed;
+    color: $white;
+
+    &:hover {
+        background-color: $red;
+        color: $black;
+    }
+}
+.btn-black {
+    background-color: $black;
+    color: $grey;
+
+    &:hover {
+        background-color: $white;
+        color: $darkRed;
+    }
+}
+.btn-white {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+        background-color: $black;
+        color: $red;
+    }
+}
+.btn-grey {
+    background-color: $grey;
+    color: $black;
+
+    &:hover {
+        background-color: $darkRed;
+        color: $white;
+    }
+}

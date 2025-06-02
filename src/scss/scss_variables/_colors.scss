@@ -1,0 +1,85 @@
+$darkRed: #8e1616;
+$red: #d84040;
+$grey: #eeeeee;
+$black: #1d1616;
+$white: #f9f8ff;
+
+.bg-red {
+    background-color: $red;
+}
+.bg-darkRed {
+    background-color: $darkRed;
+}
+.bg-grey {
+    background-color: $grey;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-white {
+    background-color: $white;
+}
+
+.border-red {
+    border-color: $red;
+}
+.border-darkRed {
+    border-color: $darkRed;
+}
+.border-grey {
+    border-color: $grey;
+}
+.border-black {
+    border-color: $black;
+}
+.border-white {
+    border-color: $white;
+}
+
+.border_bottom-red {
+    border-bottom: 0.15em solid $red;
+}
+.border_bottom-darkRed {
+    border-bottom: 0.15em solid $darkRed;
+}
+.border_bottom-grey {
+    border-bottom: 0.15em solid $grey;
+}
+.border_bottom-black {
+    border-bottom: 0.15em solid $black;
+}
+.border_bottom-white {
+    border-bottom: 0.15em solid $white;
+}
+
+.border_top-red {
+    border-top: 0.15em solid $red;
+}
+.border_top-darkRed {
+    border-top: 0.15em solid $darkRed;
+}
+.border_top-grey {
+    border-top: 0.15em solid $grey;
+}
+.border_top-black {
+    border-top: 0.15em solid $black;
+}
+.border_top-white {
+    border-top: 0.15em solid $white;
+}
+
+.text-white {
+    color: $white;
+}
+.text-black {
+    color: $black;
+}
+.text-grey {
+    color: $grey;
+}
+.text-red {
+    color: $red;
+}
+.text-darkRed {
+    color: $darkRed;
+}

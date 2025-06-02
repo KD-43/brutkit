@@ -1,0 +1,98 @@
+@use '../../scss/scss_variables/colors' as *;
+@use '../../scss/fonts';
+
+@mixin checkmarkBase ($bgColor) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $bgColor;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+@mixin checkmarkStyle ($bgColor) {
+    left: 9px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid $bgColor;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@mixin checkmarkInteract ($selector, $hover, $checked) {
+    &:hover input ~ #{$selector} {
+        background-color: $hover;
+    }
+
+    & input:checked ~ #{$selector} {
+        background-color: $checked;
+    }
+
+    & input:checked ~ #{$selector}:after {
+        display: block;
+    }
+}
+
+@mixin checkmarkVariant ($selector, $baseColor, $checkmarkColor) {
+    .checkmark-#{$selector} {
+        @include checkmarkBase($baseColor);
+    }
+    .form-control .checkmark-#{$selector}:after {
+        @include checkmarkStyle($checkmarkColor);
+    }
+}
+
+.form-control {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'SPG_Con';
+    // color: $black;
+    font-size: 1.25em;
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    @include checkmarkInteract('.checkmark', $grey, $black);
+    @include checkmarkInteract('.checkmark-black', $darkRed, $grey);
+    @include checkmarkInteract('.checkmark-white', $grey, $darkRed);
+    @include checkmarkInteract('.checkmark-red', $grey, $black);
+    @include checkmarkInteract('.checkmark-darkRed', $grey, $white);
+    @include checkmarkInteract('.checkmark-grey', $grey, $black);
+}
+
+.checkmark {
+    @include checkmarkBase($white);
+
+}
+//The checkbox styling - before being checked
+.form-control .checkmark:after {
+    @include checkmarkStyle($grey);
+}
+//Actual checkmark styling - after being checked
+@include checkmarkVariant('black', $red, $black);
+@include checkmarkVariant('white', $black, $white);
+@include checkmarkVariant('red', $white, $red);
+@include checkmarkVariant('darkRed', $white, $darkRed);
+@include checkmarkVariant('grey', $white, $grey);
+

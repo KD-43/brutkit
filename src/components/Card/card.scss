@@ -1,0 +1,65 @@
+@use '../../scss/fonts';
+@use '../../scss/scss_variables/colors' as *;
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 1rem;
+}
+
+// .card-content {
+//     display: flex;
+//     height: 100%;
+//     // flex-direction: ;
+// }
+
+.card-header {
+    font-family: "SPG_Con";
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-body {
+    font-family: "Plex";
+    font-size: 1em;
+}
+
+.card-footer {
+    font-family: "SPG_Con";
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+}
+
+.border_bottom-red {
+    border-bottom: 0.15em solid $red;
+}
+.border_bottom-darkRed {
+    border-bottom: 0.15em solid $darkRed;
+}
+.border_bottom-grey {
+    border-bottom: 0.15em solid $grey;
+}
+.border_bottom-black {
+    border-bottom: 0.15em solid $black;
+}
+.border_bottom-white {
+    border-bottom: 0.15em solid $white;
+}
+
+.border_top-red {
+    border-top: 0.15em solid $red;
+}
+.border_top-darkRed {
+    border-top: 0.15em solid $darkRed;
+}
+.border_top-grey {
+    border-top: 0.15em solid $grey;
+}
+.border_top-black {
+    border-top: 0.15em solid $black;
+}
+.border_top-white {
+    border-top: 0.15em solid $white;
+}
